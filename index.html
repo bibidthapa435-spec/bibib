@@ -1,55 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibid Thapa -Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibid Thapa | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      cursor: none;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e2e8f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* CUSTOM CURSOR */
+    .cursor {
+      width: 10px;
+      height: 10px;
+      background: #38bdf8;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .cursor-follower {
+      width: 35px;
+      height: 35px;
+      border: 2px solid #38bdf8;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9998;
+      transition: 0.08s ease;
+    }
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 10%;
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 10%;
+      gap: 50px;
+    }
+
+    .hero img {
+      width: 280px;
+      border-radius: 20px;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+      transition: transform 0.4s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-text h2 {
+      font-size: 38px;
+      color: #38bdf8;
+    }
+
+    .hero-text p {
+      color: #cbd5e1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    section {
+      padding: 70px 10%;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .card {
+      background: rgba(31, 41, 55, 0.7);
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0b1220;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is a place to showcase my work, skills, and projects. I specialize in Cyber Security, and I'm passionate about learning and applying new technologies.</p>
-    </section>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="bibet.jpeg" alt="photo" class="profile-photo">
-            <p>I am a student at Tribhuvan University, majoring in BSC-CSIT. I specialize in <strong>Cyber Security</strong>, and I enjoy working with technologies to solve real-world problems.</p>
-        </div>
-    </section>
+<header>
+  <h1 style="font-weight: bold;">THAPA BIBID</h1>
+  <nav>
+    <a href="#about">About</a>.
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+<section class="hero">
+  <img src="bibet.jpeg" alt="Profile Photo" />
+  <div class="hero-text">
+    <h2>Hello, I'm Bibid👋</h2>
+    <p>
+      I am a student at Tribhuvan University, majoring in BSC-CSIT.<br>   I specialize in Cyber Security, and I enjoy working with technologies to solve real-world problems
+       & Trading in financial markets.
+    </p>
+    <a class="btn" href="#contact">Hire Me</a>
+  </div>
+</section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    I am a tech enthusiast interested in ethical hacking, cybersecurity systems,
+    and financial trading strategies.
+  </div>
+</section>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>+2 Completed</h3>
+      <p>Higher Secondary Education</p>
+    </div>
+    <div class="card">
+      <h3>BSc CSIT</h3>
+      <p>Tribhuvan University (Running)</p>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy 2026 Bibid Thapa. All rights reserved.</p>
-    </footer>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Cybersecurity</div>
+    <div class="card">Ethical Hacking</div>
+    <div class="card">Trading</div>
+    <div class="card">Web Dev</div>
+  </div>
+</section>
 
-    <script src="app.js"></script>
-    
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    Email: bibidthapa435e@gmail.com <br/>
+    Location: Nepal
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Thapa.bibid🚀</p>
+</footer>
+
+<script>
+  const cursor = document.querySelector('.cursor');
+  const follower = document.querySelector('.cursor-follower');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+
+    follower.style.left = e.clientX + 'px';
+    follower.style.top = e.clientY + 'px';
+  });
+</script>
+
 </body>
 </html>
