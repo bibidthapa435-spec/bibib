@@ -129,6 +129,17 @@
       background: #0ea5e9;
     }
 
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      margin-left: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+
     section {
       padding: 70px 10%;
     }
@@ -145,15 +156,29 @@
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.08);
       transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card:hover {
       transform: translateY(-5px);
     }
 
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-right: 5px;
+      margin-top: 10px;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
@@ -184,7 +209,8 @@
 <header>
   <h1 style="font-weight: bold;">THAPA BIBID</h1>
   <nav>
-    <a href="#about">About</a>.
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -194,10 +220,10 @@
 <section class="hero">
   <img src="bibet.jpeg" alt="Profile Photo" />
   <div class="hero-text">
-    <h2>Hello, I'm Bibid👋</h2>
+    <h2>Hello, I'm Bibid </h2>
     <p>
-      I am a student at Tribhuvan University, majoring in BSC-CSIT.<br>   I specialize in Cyber Security, and I enjoy working with technologies to solve real-world problems
-       & Trading in financial markets.
+      I am a student at Tribhuvan University, majoring in BSC-CSIT.<br>
+      I specialize in Web Development and building modern web applications, as well as trading in financial markets.
     </p>
     <a class="btn" href="#contact">Hire Me</a>
   </div>
@@ -206,8 +232,37 @@
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    I am a tech enthusiast interested in ethical hacking, cybersecurity systems,
+    I am a tech enthusiast focused on web development, backend systems with Python and Django, 
     and financial trading strategies.
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <!-- Project 1 -->
+    <div class="card">
+      <div>
+        <h3>Web Application / Project Name</h3>
+        <p style="color: #cbd5e1; font-size: 14px; margin-top: 8px;">
+          Built a functional web app using Python and Django backend with responsive UI components.
+        </p>
+        <div>
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div style="margin-top: 15px;">
+        <a class="btn" href="https://github.com/bibidthapa435-spec/school-project" target="_blank" style="font-size: 13px; padding: 6px 14px;">GitHub Repository</a>
+        <a class="btn btn-secondary" href="https://sjss-school.vercel.app/" target="_blank" style="font-size: 13px; padding: 6px 14px;">Live Demo</a>
+      </div>
+    </div>
+
+   
+
   </div>
 </section>
 
@@ -228,23 +283,26 @@
 <section id="skills">
   <h2>Skills</h2>
   <div class="grid">
-    <div class="card">Cybersecurity</div>
-    <div class="card">Ethical Hacking</div>
+    <div class="card">HTML5</div>
+    <div class="card">CSS3</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Django</div>
+    <div class="card">Git &amp; GitHub</div>
     <div class="card">Trading</div>
-    <div class="card">Web Dev</div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    Email: bibidthapa435e@gmail.com <br/>
-    Location: Nepal
+    Email: bibidthapa435@gmail.com <br/>
+    Location: Nepal, Bhaktapur 
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Thapa.bibid🚀</p>
+  <p>© 2026 Thapa.bibid</p>
 </footer>
 
 <script>
